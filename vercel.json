@@ -1,18 +1,15 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "framework": null,
-  "outputDirectory": "dist/public",
-  "functions": {
-    "dist/index.cjs": {
-      "runtime": "nodejs20.x"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+      "dest": "/dist/public/assets/$1"
     },
     {
       "src": "/(.*)",
