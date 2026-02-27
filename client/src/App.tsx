@@ -4,13 +4,19 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
+import { LanguageProvider } from "@/lib/language-context";
+import { Layout } from "@/components/layout";
+
+import PlanPage from "@/pages/plan";
+import DailyPage from "@/pages/daily";
+import TrackerPage from "@/pages/tracker";
 
 function Router() {
   return (
     <Switch>
-      {/* Add pages below */}
-      {/* <Route path="/" component={Home}/> */}
-      {/* Fallback to 404 */}
+      <Route path="/" component={PlanPage} />
+      <Route path="/daily" component={DailyPage} />
+      <Route path="/tracker" component={TrackerPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -19,10 +25,14 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
+      <LanguageProvider>
+        <TooltipProvider>
+          <Layout>
+            <Router />
+          </Layout>
+          <Toaster />
+        </TooltipProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
