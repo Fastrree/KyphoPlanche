@@ -68,23 +68,36 @@ export default function TrackerPage() {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pb-20 space-y-8">
-      <div>
-        <h1 className="text-3xl font-display font-bold">{t("tracker.title")}</h1>
-        <p className="text-muted-foreground mt-2">{t("tracker.stats")}</p>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pb-24 space-y-12 max-w-6xl mx-auto">
+      <div className="relative p-10 modern-card overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
+        <div className="relative z-10">
+          <h1 className="text-5xl font-display font-black tracking-tighter">{t("tracker.title")}</h1>
+          <p className="text-xl text-muted-foreground mt-3 font-medium max-w-2xl">{t("tracker.stats")}</p>
+        </div>
+        <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Weight Tracker */}
-        <Card className="glass-card overflow-hidden">
-          <CardHeader className="bg-muted/30 border-b border-border/40 pb-4">
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Scale className="w-5 h-5 text-primary" />
-              {t("tracker.weight")}
+        <Card className="modern-card overflow-hidden hover:border-primary/20 group">
+          <CardHeader className="bg-muted/10 border-b border-border/40 p-8">
+            <CardTitle className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-2xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-500">
+                  <Scale className="w-6 h-6" />
+                </div>
+                <span className="text-2xl font-display font-bold">{t("tracker.weight")}</span>
+              </div>
+              {weights.length > 0 && (
+                <div className="text-xs font-black uppercase tracking-widest text-muted-foreground bg-background/50 px-3 py-1 rounded-full border border-border/50">
+                  Latest: {weights[weights.length-1].weight}kg
+                </div>
+              )}
             </CardTitle>
           </CardHeader>
-          <CardContent className="p-6">
-            <div className="h-[200px] w-full mb-6">
+          <CardContent className="p-8">
+            <div className="h-[250px] w-full mb-8 p-4 bg-background/40 rounded-[2rem] border border-white/5 shadow-inner">
               {weights.length > 0 ? (
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={weights}>

@@ -74,26 +74,26 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <SidebarProvider style={{ "--sidebar-width": "16rem" } as React.CSSProperties}>
       <div className="flex min-h-screen w-full bg-background selection:bg-primary/20">
-        <Sidebar className="border-r border-border/40">
-          <SidebarHeader className="p-4 flex flex-row items-center gap-2">
-            <div className="bg-primary/20 p-2 rounded-xl text-primary">
+        <Sidebar className="border-r border-border/40 shadow-xl">
+          <SidebarHeader className="p-6 flex flex-row items-center gap-3">
+            <div className="bg-primary/20 p-2.5 rounded-2xl text-primary shadow-lg shadow-primary/20">
               <Activity className="w-6 h-6" />
             </div>
-            <h1 className="font-display font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 text-glow">
+            <h1 className="font-display font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-primary via-primary/80 to-primary/40 text-glow">
               KyphoPlanche
             </h1>
           </SidebarHeader>
-          <SidebarContent>
+          <SidebarContent className="px-3">
             <SidebarGroup>
-              <SidebarGroupLabel className="text-xs uppercase tracking-wider font-semibold text-muted-foreground/70">Menu</SidebarGroupLabel>
+              <SidebarGroupLabel className="px-4 text-[10px] uppercase tracking-[0.2em] font-black text-muted-foreground/50 mb-2">Main Terminal</SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
                   {navItems.map((item) => (
                     <SidebarMenuItem key={item.url}>
-                      <SidebarMenuButton asChild isActive={location === item.url} className="my-1 rounded-xl font-medium transition-all duration-200">
-                        <Link href={item.url} className="flex items-center gap-3 px-3 py-2.5">
-                          <item.icon className={`w-5 h-5 ${location === item.url ? "text-primary" : "text-muted-foreground"}`} />
-                          <span>{item.title}</span>
+                      <SidebarMenuButton asChild isActive={location === item.url} className={`my-1.5 rounded-2xl font-semibold transition-all duration-300 h-12 ${location === item.url ? "modern-card shadow-lg shadow-primary/10" : "hover:bg-muted/50"}`}>
+                        <Link href={item.url} className="flex items-center gap-4 px-4">
+                          <item.icon className={`w-5 h-5 transition-transform duration-300 ${location === item.url ? "text-primary scale-110" : "text-muted-foreground"}`} />
+                          <span className={location === item.url ? "text-foreground" : "text-muted-foreground"}>{item.title}</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -104,8 +104,8 @@ export function Layout({ children }: { children: ReactNode }) {
           </SidebarContent>
         </Sidebar>
 
-        <div className="flex-1 flex flex-col w-full">
-          <header className="h-16 border-b border-border/40 flex items-center justify-between px-4 sm:px-6 backdrop-blur-md bg-background/80 sticky top-0 z-50">
+        <div className="flex-1 flex flex-col w-full relative">
+          <header className="h-20 border-b border-border/40 flex items-center justify-between px-6 sm:px-10 backdrop-blur-2xl bg-background/60 sticky top-0 z-50">
             <div className="flex items-center gap-2">
               <SidebarTrigger className="md:hidden" />
             </div>

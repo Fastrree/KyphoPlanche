@@ -72,15 +72,28 @@ export default function DailyPage() {
   );
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pb-20">
-      <div className="mb-10 text-center md:text-left">
-        <h1 className="text-4xl font-display font-bold text-foreground">{t("daily.title")}</h1>
-        <p className="text-muted-foreground mt-2">{format(new Date(), 'EEEE, MMMM do')}</p>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pb-24 max-w-5xl mx-auto">
+      <div className="mb-12 flex flex-col md:flex-row items-end justify-between gap-6 border-b border-border/40 pb-8">
+        <div>
+          <h1 className="text-5xl font-display font-black tracking-tighter text-foreground">{t("daily.title")}</h1>
+          <p className="text-xl text-muted-foreground mt-3 font-medium flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            {format(new Date(), 'EEEE, MMMM do')}
+          </p>
+        </div>
+        <div className="bg-card/50 backdrop-blur-md px-6 py-3 rounded-2xl border border-border/50 shadow-sm text-sm font-bold uppercase tracking-widest text-primary">
+          Live Routine
+        </div>
       </div>
 
-      {renderSection("daily.morning", dailyMorning, <Sun className="w-6 h-6 text-yellow-500" />, "bg-yellow-500/10")}
-      {renderSection("daily.evening", dailyEvening, <Moon className="w-6 h-6 text-indigo-400" />, "bg-indigo-400/10")}
-      {renderSection("daily.posture", dailyPosture, <Maximize className="w-6 h-6 text-primary" />, "bg-primary/10")}
+      {renderSection("daily.morning", dailyMorning, <Sun className="w-6 h-6 text-yellow-500" />, "bg-yellow-500/10 shadow-[0_0_20px_rgba(234,179,8,0.1)]")}
+      {renderSection("daily.evening", dailyEvening, <Moon className="w-6 h-6 text-indigo-400" />, "bg-indigo-400/10 shadow-[0_0_20px_rgba(129,140,248,0.1)]")}
+      
+      <div className="mt-12 p-1 bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 rounded-[2.5rem]">
+        <div className="bg-background rounded-[2.4rem] p-2">
+          {renderSection("daily.posture", dailyPosture, <Maximize className="w-6 h-6 text-primary" />, "bg-primary/10 shadow-[0_0_20px_rgba(var(--primary),0.1)]")}
+        </div>
+      </div>
     </motion.div>
   );
 }

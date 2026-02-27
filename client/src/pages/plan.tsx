@@ -83,19 +83,30 @@ export default function PlanPage() {
   );
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pb-20">
-      <div className="mb-10 p-6 bg-card rounded-3xl border border-border/50 shadow-sm relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none" />
-        <h1 className="text-3xl font-display font-bold mb-2">{t("plan.title")}</h1>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6">
-          <div>
-            <p className="text-sm text-muted-foreground font-medium uppercase tracking-wider">{t("progress.overall")}</p>
-            <p className="text-2xl font-bold text-foreground mt-1">{progress}%</p>
-          </div>
-          <div className="w-full sm:w-2/3">
-            <Progress value={progress} className="h-3 rounded-full bg-muted overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-primary/80 to-primary transition-all duration-500" style={{ width: `${progress}%` }} />
-            </Progress>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pb-24 max-w-5xl mx-auto">
+      <div className="mb-12 p-8 md:p-12 modern-card relative overflow-hidden group">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -mr-20 -mt-20 pointer-events-none group-hover:bg-primary/15 transition-colors duration-700" />
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-5xl font-display font-black mb-3 tracking-tighter">{t("plan.title")}</h1>
+          <p className="text-muted-foreground font-medium text-lg mb-8 max-w-2xl leading-relaxed">Level up your posture and master the planche with this scientific 4-week protocol.</p>
+          
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-8 mt-10 p-6 bg-background/40 backdrop-blur-md rounded-[2rem] border border-white/5 shadow-inner">
+            <div className="flex-shrink-0">
+              <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.3em] mb-2">{t("progress.overall")}</p>
+              <div className="flex items-baseline gap-2">
+                <span className="text-5xl font-display font-black text-primary">{progress}</span>
+                <span className="text-2xl font-bold text-muted-foreground/50">%</span>
+              </div>
+            </div>
+            <div className="flex-1 space-y-3">
+              <div className="flex justify-between text-xs font-bold uppercase tracking-widest text-muted-foreground/70 px-1">
+                <span>Phase Progress</span>
+                <span>{completedTasks} / {totalTasks} Tasks</span>
+              </div>
+              <Progress value={progress} className="h-4 rounded-full bg-muted/30 border border-white/5 overflow-hidden p-1">
+                <div className="h-full rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/40 shadow-[0_0_20px_rgba(var(--primary),0.5)] transition-all duration-1000 cubic-bezier(0.34, 1.56, 0.64, 1)" style={{ width: `${progress}%` }} />
+              </Progress>
+            </div>
           </div>
         </div>
       </div>
