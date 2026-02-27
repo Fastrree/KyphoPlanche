@@ -1,38 +1,37 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
-import { sql } from "drizzle-orm";
 
-export const weightLogs = sqliteTable("weight_logs", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  timestamp: text("timestamp").default(sql`CURRENT_TIMESTAMP`).notNull(),
+export const weightLogs = pgTable("weight_logs", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
   weight: text("weight").notNull(),
 });
 
-export const plancheLeanLogs = sqliteTable("planche_lean_logs", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  timestamp: text("timestamp").default(sql`CURRENT_TIMESTAMP`).notNull(),
+export const plancheLeanLogs = pgTable("planche_lean_logs", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
   durationSeconds: integer("duration_seconds").notNull(),
 });
 
-export const tuckPlancheLogs = sqliteTable("tuck_planche_logs", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  timestamp: text("timestamp").default(sql`CURRENT_TIMESTAMP`).notNull(),
+export const tuckPlancheLogs = pgTable("tuck_planche_logs", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
   durationSeconds: integer("duration_seconds").notNull(),
 });
 
-export const workoutNotes = sqliteTable("workout_notes", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
+export const workoutNotes = pgTable("workout_notes", {
+  id: serial("id").primaryKey(),
   date: text("date").notNull(), // YYYY-MM-DD
   note: text("note").notNull(),
-  timestamp: text("timestamp").default(sql`CURRENT_TIMESTAMP`).notNull(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
 });
 
-export const taskCompletions = sqliteTable("task_completions", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
+export const taskCompletions = pgTable("task_completions", {
+  id: serial("id").primaryKey(),
   date: text("date").notNull(), // YYYY-MM-DD
   taskId: text("task_id").notNull(), 
-  completed: integer("completed", { mode: "boolean" }).default(true).notNull(),
+  completed: boolean("completed").default(true).notNull(),
 });
 
 export const insertWeightLogSchema = createInsertSchema(weightLogs).omit({ id: true, timestamp: true });
