@@ -1,0 +1,239 @@
+ 💪 Fitness Planı Uygulaması — Geliştirici Promptu
+
+---
+
+## Kullanıcı Profili
+
+- 17 yaşında erkek
+- Boy: 1.80 cm, Kilo: ~57 kg, yağ oranı düşük
+- 2 yıl spor geçmişi (1 yıl ağırlık, boks)
+- Teşhis: Postüral kifoz başlangıcı (kamburluk) + ani hareketten kaynaklanan bel zorlanması
+- Doktor onayı var: yapısal sorun yok, egzersizle düzelir
+- Hedef 1: Postürü düzeltmek, beli iyileştirmek
+- Hedef 2: Calisthenics'te planche öğrenmek
+
+---
+
+## Uygulamanın Bölümleri
+
+Uygulama 3 ana sekmeden oluşur: **Plan**, **Günlük** ve **Takip**.
+
+---
+
+## 1. PLAN SEKMESİ
+
+Kullanıcının haftalık antrenman programını gösterir ve takip eder.
+
+### Hafta Yapısı
+
+İki haftalık blok vardır:
+- **Hafta 1-2:** Rehabilitasyon ve Temel
+- **Hafta 3-4:** Güç ve İlerleme
+
+Her blokta 7 gün vardır. Her gün tıklanınca o günün egzersizleri açılır. Her egzersiz ayrı ayrı işaretlenebilir. Günün tüm egzersizleri tamamlandığında günün ikonu ✅ olarak değişir.
+
+---
+
+### HAFTA 1-2 İÇERİĞİ
+
+**Pazartesi — Core Aktivasyon**
+1. Bird-Dog — 3 set × 10 tekrar (her taraf) | Dört ayak, kol öne-bacak arkaya, 3 sn tut; bel sallanmasın, kalça yükselmesin
+2. Dead Bug — 3 set × 10 tekrar (her taraf) | Sırt üstü, beli yere bastır, karşılıklı kol-bacak yere doğru indir, değdirme
+3. Glute Bridge — 3 set × 15 tekrar | Dizler bükülü, kalçayı yukarı it, üstte 2 sn sıkıştır, yavaş in
+4. Plank — 3 set × 30 saniye | Dirsek omuz altında, vücut düz çizgi; kalça ne yukarı ne aşağı
+5. Child Pose — 2 dakika | Diz üstü çök, öne uzan, alnı yere koy, kollar öne uzatılmış
+6. Göğüs Esnemesi (kapı eşiği) — 1 dakika | Dirsekler 90°, kapıya dayan, öne adım at, göğüs gerilsin
+
+**Salı — Üst Vücut + Omuz**
+1. Şınav — 4 set × 10-15 tekrar | Omuzlar kulaklara yaklaşmasın; yavaş in (3 sn), kürekler birleşsin
+2. Barfiks — 4 set × maksimum | Göğsü bara doğru getir, omuzları aşağı çek, kontrollü in
+3. Wall Angel — 3 set × 10 tekrar | Sırt tamamen duvarda; kollar W'dan Y'ye yavaş uzat, geri W'ya
+4. Ters Y Açma — 3 set × 15 tekrar | Kollar öne uzatılmış, yavaşça iki yana aç; kürekler birleşsin
+5. Planche Lean — 3 set × 10 saniye | Şınav pozunda öne eğil, omuzlar bileğin önüne geçsin; kollar düz
+
+**Çarşamba — Aktif Dinlenme**
+1. Yürüyüş — 20-30 dakika | Dik dur, omuzlar arkada, göğüs açık, bakış ileri
+2. Hip Flexor Germe — 3 × 30 saniye (her taraf) | Bir dizin üstüne çök, kalçayı öne it; ön kalçada gerilme hissedilmeli
+3. Thoracic Rotation — 3 × 8 tekrar (her taraf) | Yan yat, dizler 90°; üst kolu arkaya döndür, sadece göğüs dönsün
+
+**Perşembe — Core + Alt Vücut**
+1. Bird-Dog — 3 set × 10 (her taraf)
+2. Side Plank — 3 set × 20-30 saniye (her taraf) | Yana uzan, dirsek omuz altında; kalçayı kaldır, düz çizgi
+3. Squat — 4 set × 12 tekrar | Göğüs dik; dizler parmak yönünde; bel yuvarlıyorsa dur
+4. Glute Bridge — 3 set × 15
+5. Child Pose — 2 dakika
+
+**Cuma — Üst Vücut + Planche Temeli**
+1. Şınav — 4 set × maksimum
+2. Barfiks — 4 set × maksimum
+3. Wall Angel — 3 set × 12
+4. Planche Lean — 3 set × 15 saniye | Hedef: geçen haftadan 5 sn daha uzun
+5. Tuck Planche (deneme) — 5 set × maksimum süre | Kollar düz, dizleri göğse çek, yerden kalkmayı dene; 1-2 sn bile sayar
+
+**Cumartesi — Mobilite Günü**
+1. Cat-Cow — 15 tekrar (uzun versiyon)
+2. Wall Angel — 3 set × 12
+3. Hip Flexor Germe — 3 × 40 saniye (her taraf)
+4. Thoracic Rotation — 3 × 8 (her taraf)
+5. Rulo Havlu Açılımı — 5 dakika
+
+**Pazar — Tam Dinlenme**
+1. Sadece sabah rutini | Diz çekimi + cat-cow. Vücut adaptasyonu dinlenmede olur.
+
+---
+
+### HAFTA 3-4 İÇERİĞİ
+
+**Pazartesi — Core (Zorluk Artışı)**
+1. Bird-Dog — 4 set × 12 (her taraf) | 5 sn tut; önceki haftaya göre +2 tekrar ve +2 sn
+2. Dead Bug — 4 set × 12 (her taraf)
+3. Glute Bridge Tek Bacak — 4 set × 10 (her taraf) | Bir bacağı havaya kaldır, diğeriyle köprü yap
+4. Plank — 4 set × 45-60 saniye
+5. Side Plank — 3 set × 30-40 saniye
+6. Child Pose + Göğüs Esnemesi
+
+**Salı — Planche Odaklı**
+1. Şınav — 5 set × maksimum (3 sn iniş temposu)
+2. Barfiks — 5 set × maksimum
+3. Planche Lean — 4 set × 20 saniye
+4. Tuck Planche — 5 set × maksimum süre | Hedef: set başına 5+ sn
+5. Pike Push-Up — 4 set × 10 | Kalça havada (ters V), başı indirerek şınav çek
+6. Wall Angel — 3 set × 12
+
+**Çarşamba — Aktif Dinlenme**
+1. Yürüyüş — 30 dakika
+2. Hip Flexor Germe — 3 × 40 saniye
+3. Thoracic Rotation — 3 × 8
+4. Rulo Havlu Açılımı — 3 dakika
+
+**Perşembe — Güç + Bacak**
+1. Bird-Dog — 4 set × 12
+2. Squat — 4 set × 15 | Ağrı tamamen geçtiyse hafif ağırlıkla yapabilirsin
+3. Glute Bridge Tek Bacak — 3 set × 10 (her taraf)
+4. Side Plank — 3 set × 40 saniye
+5. Dead Bug — 3 set × 12
+
+**Cuma — Planche + Üst Vücut**
+1. Şınav — 5 set × maksimum
+2. Barfiks — 5 set × maksimum
+3. Tuck Planche — 6 set × maksimum süre
+4. Planche Lean — 4 set × 25 saniye
+5. Pike Push-Up — 4 set × 12
+6. Ters Y Açma — 3 set × 15
+
+**Cumartesi — Tam Mobilite**
+1. Cat-Cow — 15 tekrar
+2. Thoracic Rotation — 3 × 8
+3. Hip Flexor Germe — 3 × 45 saniye
+4. Wall Angel — 3 × 12
+5. Rulo Havlu Açılımı — 5 dakika
+
+**Pazar — Tam Dinlenme**
+1. Sadece sabah rutini
+
+---
+
+## 2. GÜNLÜK SEKMESİ
+
+Her gün yapılması gereken sabit rutinler ve kurallar burada listelenir. Egzersizler tek tek işaretlenebilir.
+
+### Sabah Rutini (Her gün, yataktan kalkmadan)
+1. Diz-Göğüs Çekimi — 3 × 30 saniye | Sırt üstü, iki dizini göğsüne çek, ellerin kavrasın, bel yere yapışsın
+2. Cat-Cow — 10 tekrar | Dört ayak: nefes alırken beli aşağı, nefes verirken sırtı tavana yuvarlat
+
+### Akşam Rutini (Her gün)
+1. Rulo Havlu Açılımı — 3 dakika | Havluyu kürek arasına koy, sırt üstü uzan, kolları yana aç ve bırak
+
+### Oturma ve Uyku Kuralları
+1. Ekran göz hizasında — sırt dik — omuzlar geride
+2. Her 30-40 dakikada kalk → 2-5 dakika yürü
+3. Yatakta kambur bilgisayar kullanımı — YOK ❌
+4. Yan yatıyorsan diz arasına yastık; sırt üstüysen diz altına yastık
+
+---
+
+## 3. TAKİP SEKMESİ
+
+Kullanıcının zaman içindeki gelişimini kaydettiği bölüm. Her kayıt tarih-saat damgasıyla saklanır. Kayıtlar listelenir ve tek tek silinebilir.
+
+### İstatistik Kartları (özet, üstte gösterilir)
+- Toplam tamamlanan görev sayısı
+- Genel ilerleme yüzdesi
+- Son kaydedilen vücut ağırlığı
+- Son kaydedilen planche lean süresi
+
+### Vücut Ağırlığı Kaydı
+- Giriş alanı: sadece ondalıklı sayı kabul eder (örn: 57.5)
+- Harf, özel karakter, negatif sayı girilemez
+- Geçerli aralık: 20 ile 300 kg arası
+- Geçersiz giriş olursa alan kırmızıya döner, hata mesajı gösterilir
+- Kayıt listesi: tarih-saat + değer + silme butonu
+
+### Planche Lean Süresi Kaydı
+- Giriş alanı: sadece tam sayı kabul eder (saniye cinsinden)
+- Harf ve özel karakter girilemez
+- Geçerli aralık: 1 ile 999 saniye
+- Kayıt listesi: tarih-saat + değer + silme butonu
+
+### Tuck Planche Süresi Kaydı
+- Giriş alanı: sadece tam sayı kabul eder (saniye cinsinden)
+- Harf ve özel karakter girilemez
+- Geçerli aralık: 1 ile 999 saniye
+- Kayıt listesi: tarih-saat + değer + silme butonu
+
+### Antrenman Notu Kaydı
+- Tarih seçici: varsayılan olarak bugünün tarihi seçili gelir
+- Not alanı: serbest metin, maksimum 500 karakter, karakter sayacı gösterilir
+- Boş bırakılamaz, boş gönderilmeye çalışılırsa hata gösterilir
+- Kayıt listesi: tarih + not metni + silme butonu
+
+---
+
+## 4. GENEL UYGULAMA DAVRANIŞLARI
+
+### Üst Bar (Her zaman görünür, sabit)
+- Uygulama başlığı
+- Tema değiştirme butonu (koyu/açık)
+- Sıfırlama butonu
+- Genel ilerleme çubuğu: kaç görevin tamamlandığını ve yüzdesini gösterir
+
+### Sıfırlama
+- Butona basılınca onay modalı açılır
+- "Vazgeç" ile iptal edilir
+- "Evet, Sıfırla" ile tüm işaretler ve kayıtlar silinir
+- ESC tuşu ve modal dışına tıklamak da modalı kapatır
+
+### Veri Saklama
+- Tüm veriler (işaretlenen görevler, kayıtlar, tema tercihi, açık/kapalı kart durumları, seçili hafta) localStorage'a kaydedilir
+- Sayfa yenilenince veya kapatılıp açılınca tüm veriler geri yüklenir
+
+### Bildirimler (Toast)
+- Kayıt yapıldığında: yeşil bildirim
+- Kayıt silindiğinde: kırmızı bildirim
+- Sıfırlandığında: kırmızı bildirim
+- Bildirim 2.4 saniye sonra otomatik kapanır
+
+### Klavye Erişilebilirliği
+- Tüm butonlar ve görev öğeleri Tab ile odaklanabilir
+- Enter veya boşluk tuşuyla görevler işaretlenebilir ve kartlar açılıp kapanabilir
+- Modal ESC ile kapanır
+
+---
+
+## 5. EKLEMEK İSTEYEBİLECEĞİN ÖZELLİKLER (Geliştirme Fikirleri)
+
+Bu kısım uygulamayı daha da geliştirmek isteyenler için öneri listesidir:
+
+- **Haftalık özet ekranı:** O haftada kaç gün tam tamamlandı, yüzde kaç başarı gibi
+- **Grafik:** Planche lean ve tuck planche sürelerinin zaman içindeki değişimini gösteren basit çizgi grafik
+- **Hatırlatma:** Tarayıcı bildirimiyle belirli saatte antrenman hatırlatması
+- **Özel egzersiz ekleme:** Kullanıcının kendi egzersizini programa ekleyebilmesi
+- **Fotoğraf günlüğü:** Kullanıcının ilerleme fotoğraflarını base64 olarak saklayabilmesi
+- **Planche aşama takibi:** Tuck → Advanced Tuck → Straddle → Full Planche ilerleme haritası
+- **Dinlenme sayacı:** Set arası geri sayım zamanlayıcısı
+- **Dışa aktarma:** Tüm verileri JSON veya CSV olarak indirme
+- **İçe aktarma:** Dışa aktarılan dosyadan verileri geri yükleme
+- **Ağırlık grafiği:** Vücut ağırlığı değişimini gösteren çizgi grafik
+- **Streak (seri) takibi:** Kaç gün üst üste en az 1 görev tamamlandı
+- **Egzersiz açıklama videosu:** Her egzersizin yanına YouTube linki veya GIF ekleme
+- **Çoklu profil:** Farklı kullanıcıların aynı cihazda ayrı veri saklayabilmesi
